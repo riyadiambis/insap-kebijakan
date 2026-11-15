@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hapus Akun Insap</title>
+  <link rel="icon" href="ikon.png">
+  <link rel="stylesheet" href="gaya.css">
+</head>
+<body>
+<main>
+  <header class="kepala">
+    <img src="ikon.png" alt="Logo Insap">
+    <div>
+      <div class="nama">Insap: Catat Keuangan</div>
+      <div class="sub">oleh Ofi Labs</div>
+    </div>
+  </header>
+
+  <h1>Menghapus Akun Insap dan Datanya</h1>
+  <p class="tanggal">Berlaku sejak 15 November 2026</p>
+
+  <h2>Cara 1: dari aplikasi (langsung)</h2>
+  <div class="kartu">
+    <ol>
+      <li>Buka Insap, lalu ketuk foto profil di kanan atas.</li>
+      <li>Kalau diminta, masuk dengan akun yang ingin dihapus.</li>
+      <li>Gulir ke bawah, ketuk <strong>Hapus Akun Permanen</strong>.</li>
+      <li>Ketuk <strong>Hapus Permanen</strong> untuk mengonfirmasi.</li>
+    </ol>
+    <p>Kalau muncul pesan untuk masuk ulang, keluar dari akun, masuk lagi, lalu ulangi langkah 3. Ini pengaman dari Google untuk sesi yang sudah lama.</p>
+  </div>
+
+  <h2>Cara 2: lewat email (tanpa aplikasi)</h2>
+  <div class="kartu">
+    <p>Kirim email ke <a href="mailto:rahmatriyadiambis@gmail.com?subject=Hapus%20akun%20Insap">rahmatriyadiambis@gmail.com</a> dengan judul <strong>Hapus akun Insap</strong>, dari alamat email yang terdaftar di akun Insap. Permintaan diproses paling lambat 7 hari, lalu kamu menerima balasan konfirmasi.</p>
+  </div>
+
+  <h2>Data yang dihapus</h2>
+  <ul>
+    <li>Akun di Firebase Authentication: email, nama, foto profil, dan ID pengguna.</li>
+    <li>Seluruh data cadangan di Cloud Firestore: transaksi, kategori, refleksi, dan catatan waktu cadangan.</li>
+  </ul>
+  <p>Penghapusan bersifat permanen dan tidak bisa dibatalkan. Insap tidak menyimpan cadangan lain dari data tersebut.</p>
+
+  <h2>Data yang tidak ikut terhapus</h2>
+  <ul>
+    <li>Catatan yang tersimpan di HP. Hapus dengan mencopot Insap atau menghapus data aplikasi di Setelan HP.</li>
+    <li>Foto struk yang pernah dikirim ke Google Gemini untuk dipindai. Insap tidak menyimpan foto itu, dan penyimpanannya di sisi Google diatur oleh <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ketentuan Gemini API</a>.</li>
+  </ul>
+
+  <p>Penjelasan lengkap ada di <a href="kebijakan-privasi.html">Kebijakan Privasi</a>.</p>
+
+  <footer>
+    Insap: Catat Keuangan · Ofi Labs · <a href="index.html">Beranda</a> · <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+  </footer>
+</main>
+</body>
+</html>

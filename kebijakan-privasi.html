@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kebijakan Privasi Insap</title>
+  <link rel="icon" href="ikon.png">
+  <link rel="stylesheet" href="gaya.css">
+</head>
+<body>
+<main>
+  <header class="kepala">
+    <img src="ikon.png" alt="Logo Insap">
+    <div>
+      <div class="nama">Insap: Catat Keuangan</div>
+      <div class="sub">oleh Ofi Labs</div>
+    </div>
+  </header>
+
+  <h1>Kebijakan Privasi</h1>
+  <p class="tanggal">Berlaku sejak 15 November 2026</p>
+
+  <p>Insap adalah aplikasi Android pencatat pengeluaran untuk mahasiswa. Aplikasi ini dikembangkan oleh tim Ofi Labs (Rahmat Riyadi, Muh Ghazy Daffa Sampe, dan Luthfi Farros Athailah) sebagai tugas akhir mata kuliah Pemrograman Piranti Bergerak, Program Studi Informatika, Fakultas Teknik, Universitas Mulawarman.</p>
+  <p>Halaman ini menjelaskan data apa yang diproses Insap, ke mana data itu dikirim, dan bagaimana kamu bisa menghapusnya.</p>
+
+  <div class="kartu sorot">
+    <strong>Ringkasnya:</strong> catatan keuanganmu tersimpan di HP. Data hanya keluar dari HP saat kamu memakai tiga fitur: masuk akun, mencadangkan data, dan memindai struk. Insap tidak menampilkan iklan, tidak memakai analitik, dan tidak menjual data.
+  </div>
+
+  <h2>1. Data yang tersimpan di HP</h2>
+  <p>Transaksi, kategori, refleksi mingguan, dan pengaturan aplikasi disimpan di basis data lokal di HP kamu. Data ini tidak dikirim ke mana pun kecuali kamu memakai fitur Cadangkan. Data lokal terhapus saat kamu menghapus data aplikasi atau mencopot Insap.</p>
+
+  <h2>2. Data yang keluar dari HP</h2>
+  <div class="tabel-gulir">
+  <table>
+    <tr><th>Fitur</th><th>Data</th><th>Dikirim ke</th><th>Wajib?</th></tr>
+    <tr>
+      <td>Masuk akun</td>
+      <td>Alamat email, nama, foto profil (kalau masuk dengan Google), dan ID pengguna</td>
+      <td>Firebase Authentication milik Google</td>
+      <td>Tidak. Semua fitur pencatatan bisa dipakai tanpa akun.</td>
+    </tr>
+    <tr>
+      <td>Cadangkan</td>
+      <td>Salinan transaksi, kategori, dan refleksi, serta jumlah dan waktu cadangan terakhir</td>
+      <td>Cloud Firestore di project Firebase milik pengembang, dikaitkan ke ID akunmu</td>
+      <td>Tidak. Hanya dikirim saat kamu menekan Cadangkan Sekarang.</td>
+    </tr>
+    <tr>
+      <td>Pindai struk</td>
+      <td>Foto struk yang kamu ambil, dan daftar nama kategorimu</td>
+      <td>Google Gemini API, untuk membaca nama barang dan harga</td>
+      <td>Tidak. Hanya dikirim saat kamu memindai struk.</td>
+    </tr>
+  </table>
+  </div>
+
+  <h2>3. Tentang pindai struk dan Google Gemini</h2>
+  <p>Foto struk dipotong oleh pemindai dokumen Google (ML Kit, berjalan di HP), lalu dikirim ke Google Gemini untuk dibaca. Insap menghapus salinan foto sementara di HP setelah hasilnya diterima, dan tidak menyimpan foto struk.</p>
+  <p>Insap memakai layanan Gemini tingkat gratis. Menurut <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ketentuan Gemini API</a>, isi permintaan dan jawabannya dapat dipakai Google untuk memperbaiki produknya, dan dapat dibaca oleh peninjau manusia. Karena itu, <strong>jangan memotret struk yang memuat data sensitif</strong> seperti nomor kartu, NIK, atau alamat rumah.</p>
+
+  <h2>4. Siapa yang bisa melihat data cadanganmu</h2>
+  <p>Aturan keamanan Firestore hanya mengizinkan akun yang sedang masuk membaca dan menulis datanya sendiri. Data cadangan tersimpan di project Firebase milik pengembang, jadi pengembang secara teknis dapat mengaksesnya. Pengembang tidak membaca, menjual, atau membagikan data cadanganmu, kecuali diwajibkan oleh hukum.</p>
+  <p>Semua data dikirim melalui koneksi terenkripsi (HTTPS).</p>
+
+  <h2>5. Yang tidak dilakukan Insap</h2>
+  <ul>
+    <li>Tidak menampilkan iklan.</li>
+    <li>Tidak memakai analitik, pelacakan, atau pelaporan crash dari pihak ketiga.</li>
+    <li>Tidak meminta izin lokasi, kontak, mikrofon, atau berkas.</li>
+    <li>Tidak menjual atau menyewakan data pengguna.</li>
+  </ul>
+
+  <h2>6. Berapa lama data disimpan</h2>
+  <p>Data cadangan disimpan sampai kamu menghapus akun atau meminta penghapusan. Data di HP tetap ada sampai kamu menghapus data aplikasi atau mencopot Insap.</p>
+
+  <h2>7. Hak kamu dan cara menghapus data</h2>
+  <p>Sesuai Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi, kamu berhak meminta salinan, perbaikan, atau penghapusan data pribadimu.</p>
+  <ul>
+    <li>Di aplikasi: buka Akun, lalu ketuk <strong>Hapus Akun Permanen</strong>. Akun dan seluruh data cadangan di awan langsung dihapus.</li>
+    <li>Tanpa aplikasi: ikuti petunjuk di halaman <a href="hapus-akun.html">Hapus Akun</a>.</li>
+  </ul>
+
+  <h2>8. Anak-anak</h2>
+  <p>Insap ditujukan untuk pengguna berusia 18 tahun ke atas dan tidak sengaja mengumpulkan data anak-anak.</p>
+
+  <h2>9. Perubahan kebijakan</h2>
+  <p>Kalau kebijakan ini berubah, versi baru akan dipasang di halaman ini dengan tanggal berlaku yang baru.</p>
+
+  <h2>10. Kontak</h2>
+  <p>Pertanyaan atau permintaan soal privasi: <a href="mailto:rahmatriyadiambis@gmail.com">rahmatriyadiambis@gmail.com</a></p>
+
+  <footer>
+    Insap: Catat Keuangan · Ofi Labs · <a href="index.html">Beranda</a> · <a href="hapus-akun.html">Hapus Akun</a>
+  </footer>
+</main>
+</body>
+</html>

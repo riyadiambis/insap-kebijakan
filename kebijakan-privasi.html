@@ -18,13 +18,13 @@
   </header>
 
   <h1>Kebijakan Privasi</h1>
-  <p class="tanggal">Berlaku sejak 15 November 2026</p>
+  <p class="tanggal">Berlaku sejak 20 November 2026</p>
 
   <p>Insap adalah aplikasi Android pencatat pengeluaran untuk mahasiswa. Aplikasi ini dikembangkan oleh tim Ofi Labs (Rahmat Riyadi, Muh Ghazy Daffa Sampe, dan Luthfi Farros Athailah) sebagai tugas akhir mata kuliah Pemrograman Piranti Bergerak, Program Studi Informatika, Fakultas Teknik, Universitas Mulawarman, di bawah bimbingan Anton Prafanto, S.Kom., MT (Dosen Pembimbing I) dan Gubtha Mahendra Putra, S.Kom., M.Eng. (Dosen Pembimbing II).</p>
   <p>Halaman ini menjelaskan data apa yang diproses Insap, ke mana data itu dikirim, dan bagaimana kamu bisa menghapusnya.</p>
 
   <div class="kartu sorot">
-    <strong>Ringkasnya:</strong> catatan keuanganmu tersimpan di HP. Data hanya keluar dari HP saat kamu memakai tiga fitur: masuk akun, mencadangkan data, dan memindai struk. Insap tidak menampilkan iklan, tidak memakai analitik, dan tidak menjual data.
+    <strong>Ringkasnya:</strong> catatan keuanganmu tersimpan di HP. Data hanya keluar dari HP dalam empat keadaan: masuk akun, mencadangkan data, memindai struk, dan saat kamu memilih menonton iklan. Insap hanya menampilkan iklan video berhadiah dari Google AdMob bila kamu memilih menontonnya untuk menambah kuota pindai; tetap tidak memakai analitik dan tidak menjual data.
   </div>
 
   <h2>1. Data yang tersimpan di HP</h2>
@@ -52,6 +52,12 @@
       <td>Google Gemini API, untuk membaca nama barang dan harga</td>
       <td>Tidak. Hanya dikirim saat kamu memindai struk.</td>
     </tr>
+    <tr>
+      <td>Iklan berhadiah</td>
+      <td>ID iklan perangkat (Advertising ID), alamat IP, informasi perangkat dan aplikasi, serta interaksi dengan iklan</td>
+      <td>Google AdMob (SDK Google Mobile Ads), untuk menayangkan iklan, mengukur, dan mencegah penipuan</td>
+      <td>Tidak. Iklan hanya dimuat dan diputar bila kamu memilih menontonnya saat kuota pindai pekan itu habis.</td>
+    </tr>
   </table>
   </div>
 
@@ -59,35 +65,41 @@
   <p>Foto struk dipotong oleh pemindai dokumen Google (ML Kit, berjalan di HP), lalu dikirim ke Google Gemini untuk dibaca. Insap menghapus salinan foto sementara di HP setelah hasilnya diterima, dan tidak menyimpan foto struk.</p>
   <p>Insap memakai layanan Gemini tingkat gratis. Menurut <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ketentuan Gemini API</a>, isi permintaan dan jawabannya dapat dipakai Google untuk memperbaiki produknya, dan dapat dibaca oleh peninjau manusia. Karena itu, <strong>jangan memotret struk yang memuat data sensitif</strong> seperti nomor kartu, NIK, atau alamat rumah.</p>
 
-  <h2>4. Siapa yang bisa melihat data cadanganmu</h2>
+  <h2>4. Iklan berhadiah dan Google AdMob</h2>
+  <p>Mulai versi 2.0.0, Insap menampilkan iklan video berhadiah (<em>rewarded</em>) dari Google AdMob, hanya bila kamu sendiri mengetuk tombol <strong>"Tonton iklan, dapat +1 pindai"</strong> saat kuota pindai pekan itu habis. Tidak ada iklan banner atau iklan yang muncul sendiri, dan maksimal 10 bonus per pekan. Paket berbayar (Plus/Pro, bebas iklan) belum tersedia.</p>
+  <p>Saat iklan dimuat, SDK Google Mobile Ads dapat mengumpulkan dan membagikan ke Google: ID iklan perangkat (<em>Advertising ID</em>), alamat IP, informasi perangkat dan aplikasi, serta interaksi dengan iklan, untuk menayangkan iklan, mengukur, dan mencegah penipuan. Insap tidak mengirim catatan keuangan, foto struk, atau isi refleksi ke AdMob.</p>
+  <p>Pengguna di Wilayah Ekonomi Eropa, Inggris, dan Swiss diminta persetujuan lewat formulir Google (UMP) dan bisa mengubahnya lewat menu Akun <strong>"Pengaturan privasi iklan"</strong>. Pengguna lain dapat mereset atau menonaktifkan personalisasi ID iklan di Setelan Android (<strong>Google &gt; Iklan</strong>).</p>
+  <p>Pelajari lebih lanjut di <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a> dan <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">cara Google memakai data dari aplikasi mitra</a>.</p>
+
+  <h2>5. Siapa yang bisa melihat data cadanganmu</h2>
   <p>Aturan keamanan Firestore hanya mengizinkan akun yang sedang masuk membaca dan menulis datanya sendiri. Data cadangan tersimpan di project Firebase milik pengembang, jadi pengembang secara teknis dapat mengaksesnya. Pengembang tidak membaca, menjual, atau membagikan data cadanganmu, kecuali diwajibkan oleh hukum.</p>
   <p>Semua data dikirim melalui koneksi terenkripsi (HTTPS).</p>
 
-  <h2>5. Yang tidak dilakukan Insap</h2>
+  <h2>6. Yang tidak dilakukan Insap</h2>
   <ul>
-    <li>Tidak menampilkan iklan.</li>
+    <li>Tidak menampilkan iklan yang muncul sendiri; iklan hanya diputar bila kamu memilihnya.</li>
     <li>Tidak memakai analitik, pelacakan, atau pelaporan crash dari pihak ketiga.</li>
     <li>Tidak meminta izin lokasi, kontak, mikrofon, atau berkas.</li>
     <li>Tidak menjual atau menyewakan data pengguna.</li>
   </ul>
 
-  <h2>6. Berapa lama data disimpan</h2>
+  <h2>7. Berapa lama data disimpan</h2>
   <p>Data cadangan disimpan sampai kamu menghapus akun atau meminta penghapusan. Data di HP tetap ada sampai kamu menghapus data aplikasi atau mencopot Insap.</p>
 
-  <h2>7. Hak kamu dan cara menghapus data</h2>
+  <h2>8. Hak kamu dan cara menghapus data</h2>
   <p>Sesuai Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi, kamu berhak meminta salinan, perbaikan, atau penghapusan data pribadimu.</p>
   <ul>
     <li>Di aplikasi: buka Akun, lalu ketuk <strong>Hapus Akun Permanen</strong>. Akun dan seluruh data cadangan di awan langsung dihapus.</li>
     <li>Tanpa aplikasi: ikuti petunjuk di halaman <a href="hapus-akun.html">Hapus Akun</a>.</li>
   </ul>
 
-  <h2>8. Anak-anak</h2>
-  <p>Insap ditujukan untuk pengguna berusia 18 tahun ke atas dan tidak sengaja mengumpulkan data anak-anak.</p>
+  <h2>9. Anak-anak</h2>
+  <p>Insap ditujukan untuk pengguna berusia 18 tahun ke atas dan tidak sengaja mengumpulkan data anak-anak, dan iklan yang ditampilkan juga tidak ditujukan untuk anak.</p>
 
-  <h2>9. Perubahan kebijakan</h2>
+  <h2>10. Perubahan kebijakan</h2>
   <p>Kalau kebijakan ini berubah, versi baru akan dipasang di halaman ini dengan tanggal berlaku yang baru.</p>
 
-  <h2>10. Kontak</h2>
+  <h2>11. Kontak</h2>
   <p>Pertanyaan atau permintaan soal privasi: <a href="mailto:rahmatriyadiambis@gmail.com">rahmatriyadiambis@gmail.com</a></p>
 
   <footer>

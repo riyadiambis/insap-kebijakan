@@ -18,13 +18,13 @@
   </header>
 
   <h1>Kebijakan Privasi</h1>
-  <p class="tanggal">Berlaku sejak 20 November 2026</p>
+  <p class="tanggal">Berlaku sejak 21 November 2026</p>
 
   <p>Insap adalah aplikasi Android pencatat pengeluaran untuk mahasiswa. Aplikasi ini dikembangkan oleh tim Ofi Labs (Rahmat Riyadi, Muh Ghazy Daffa Sampe, dan Luthfi Farros Athailah) sebagai tugas akhir mata kuliah Pemrograman Piranti Bergerak, Program Studi Informatika, Fakultas Teknik, Universitas Mulawarman, di bawah bimbingan Anton Prafanto, S.Kom., MT (Dosen Pembimbing I) dan Gubtha Mahendra Putra, S.Kom., M.Eng. (Dosen Pembimbing II).</p>
   <p>Halaman ini menjelaskan data apa yang diproses Insap, ke mana data itu dikirim, dan bagaimana kamu bisa menghapusnya.</p>
 
   <div class="kartu sorot">
-    <strong>Ringkasnya:</strong> catatan keuanganmu tersimpan di HP. Data hanya keluar dari HP dalam empat keadaan: masuk akun, mencadangkan data, memindai struk, dan saat kamu memilih menonton iklan. Insap hanya menampilkan iklan video berhadiah dari Google AdMob bila kamu memilih menontonnya untuk menambah kuota pindai; tetap tidak memakai analitik dan tidak menjual data.
+    <strong>Ringkasnya:</strong> catatan keuanganmu tersimpan di HP. Data hanya keluar dari HP dalam lima keadaan: masuk akun, mencadangkan data, memindai struk, meminta refleksi AI, dan saat kamu memilih menonton iklan. Insap hanya menampilkan iklan video berhadiah dari Google AdMob bila kamu memilih menontonnya untuk menambah kuota pindai; tetap tidak memakai analitik dan tidak menjual data.
   </div>
 
   <h2>1. Data yang tersimpan di HP</h2>
@@ -53,6 +53,12 @@
       <td>Tidak. Hanya dikirim saat kamu memindai struk.</td>
     </tr>
     <tr>
+      <td>Refleksi AI</td>
+      <td>Ringkasan angka pekan itu: total pengeluaran, target pekanan, dan total per kategori (pekan ini dan pekan lalu). Tanpa nama barang, nama toko, atau catatan.</td>
+      <td>Google Gemini API, untuk menulis 3 saran belanja</td>
+      <td>Tidak. Hanya dikirim saat kamu mengetuk "Minta refleksi AI", paling banyak sekali per pekan.</td>
+    </tr>
+    <tr>
       <td>Iklan berhadiah</td>
       <td>ID iklan perangkat (Advertising ID), alamat IP, informasi perangkat dan aplikasi, serta interaksi dengan iklan</td>
       <td>Google AdMob (SDK Google Mobile Ads), untuk menayangkan iklan, mengukur, dan mencegah penipuan</td>
@@ -63,6 +69,7 @@
 
   <h2>3. Tentang pindai struk dan Google Gemini</h2>
   <p>Foto struk dipotong oleh pemindai dokumen Google (ML Kit, berjalan di HP), lalu dikirim ke Google Gemini untuk dibaca. Insap menghapus salinan foto sementara di HP setelah hasilnya diterima, dan tidak menyimpan foto struk.</p>
+  <p>Fitur Refleksi AI hanya mengirim ringkasan angka per kategori (bukan daftar transaksimu) ke Gemini untuk menulis 3 saran. Hasilnya disimpan di HP agar tidak perlu dikirim ulang pada pekan yang sama.</p>
   <p>Insap memakai layanan Gemini tingkat gratis. Menurut <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ketentuan Gemini API</a>, isi permintaan dan jawabannya dapat dipakai Google untuk memperbaiki produknya, dan dapat dibaca oleh peninjau manusia. Karena itu, <strong>jangan memotret struk yang memuat data sensitif</strong> seperti nomor kartu, NIK, atau alamat rumah.</p>
 
   <h2>4. Iklan berhadiah dan Google AdMob</h2>
